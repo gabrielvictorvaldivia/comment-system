@@ -9,7 +9,7 @@
     "format": "prettier --write .",
     "dev": "vite",
     "build": "tsc && vite build",
-    "test": "vitest"
+    "test": "vitest run"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
