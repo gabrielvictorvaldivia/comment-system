@@ -8,4 +8,8 @@ export class StateManager<T> {
   getState(): T {
     return this.state;
   }
+
+  setState(updates: Partial<T>): void {
+    this.state = { ...this.state, ...updates };
+  }
 }

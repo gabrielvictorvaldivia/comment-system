@@ -8,4 +8,17 @@ describe('StateManager', () => {
 
     expect(manager.getState()).toEqual(initialState);
   });
+
+  it('should update state', () => {
+    interface TestState {
+      count: number;
+      text: string;
+    }
+
+    const manager = new StateManager<TestState>({ count: 0, text: 'hello' });
+
+    manager.setState({ count: 1 });
+
+    expect(manager.getState()).toEqual({ count: 1, text: 'hello' });
+  });
 });
