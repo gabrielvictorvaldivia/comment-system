@@ -1,0 +1,65 @@
+# =========================
+# Dependencies
+# =========================
+node_modules/
+
+# =========================
+# Build output
+# =========================
+dist/
+build/
+out/
+
+# =========================
+# TypeScript
+# =========================
+*.tsbuildinfo
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Logs
+# =========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# =========================
+# OS / Editor junk
+# =========================
+.DS_Store
+Thumbs.db
+
+.vscode/
+!.vscode/extensions.json
+
+.idea/
+*.swp
+
+# =========================
+# Cache
+# =========================
+.cache/
+.eslintcache
+.parcel-cache/
+
+# =========================
+# Testing
+# =========================
+coverage/
+
+# =========================
+# Optional: lockfiles (pick your poison)
+# =========================
+# Uncomment ONLY if you do NOT want to commit lockfiles
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
