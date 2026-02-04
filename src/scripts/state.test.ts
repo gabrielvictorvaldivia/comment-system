@@ -21,4 +21,18 @@ describe('StateManager', () => {
 
     expect(manager.getState()).toEqual({ count: 1, text: 'hello' });
   });
+
+  it('should notify subscribers when state changes', () => {
+    const manager = new StateManager({ count: 0 });
+    let capturedValue: number | undefined;
+
+    // @ts-expect-error - method doesn't exist yet
+    manager.subscribe('count', (newValue) => {
+      capturedValue = newValue;
+    });
+
+    manager.setState({ count: 5 });
+
+    expect(capturedValue).toBe(5);
+  });
 });
